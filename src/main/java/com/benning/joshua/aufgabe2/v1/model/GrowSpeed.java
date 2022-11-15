@@ -1,5 +1,6 @@
-package com.benning.joshua.aufgabe2.model;
+package com.benning.joshua.aufgabe2.v1.model;
 
+import com.benning.joshua.aufgabe2.v1.model.Pixel;
 import lombok.Data;
 
 @Data
@@ -10,7 +11,7 @@ public class GrowSpeed {
         this.speeds = new float[]{speedN, speedS, speedW, speedE};
     }
 
-    public float get(Pixel.Direction direction) {
+    public float get(com.benning.joshua.aufgabe2.v1.model.Pixel.Direction direction) {
         return this.speeds[direction.getSpeedIndex()];
     }
 }

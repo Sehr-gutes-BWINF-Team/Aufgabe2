@@ -1,4 +1,4 @@
-package com.benning.joshua.aufgabe2.model;
+package com.benning.joshua.aufgabe2.v1.model;
 
 import lombok.Getter;
 import lombok.Setter;

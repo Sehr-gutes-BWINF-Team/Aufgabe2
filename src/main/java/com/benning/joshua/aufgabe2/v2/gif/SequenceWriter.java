@@ -1,4 +1,4 @@
-package com.benning.joshua.aufgabe2.gif;
+package com.benning.joshua.aufgabe2.v2.gif;
 
 import javax.imageio.*;
 import javax.imageio.metadata.IIOInvalidTreeException;

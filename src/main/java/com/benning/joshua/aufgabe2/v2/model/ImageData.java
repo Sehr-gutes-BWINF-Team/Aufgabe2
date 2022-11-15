@@ -1,13 +1,12 @@
-package com.benning.joshua.aufgabe2.model;
+package com.benning.joshua.aufgabe2.v2.model;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.*;
 
 public final class ImageData {
     private final Pixel[][] data;
@@ -70,17 +69,6 @@ public final class ImageData {
 
     public List<Pixel> expand(Pixel pixel) {
         List<Pixel> newPixel = new ArrayList<>();
-        Random random = new Random();
-        for (Pixel.Direction value : Pixel.Direction.values()) {
-            Pixel neumannNeighbour = this.getEmptyNeighbours(pixel).get(value);
-            if (neumannNeighbour != null
-                    && random.nextFloat() < pixel.getGrowSpeed().get(value)) {
-                neumannNeighbour.setColor(pixel.getColor());
-                neumannNeighbour.setPixelState(Pixel.PixelState.ACTIVE);
-                neumannNeighbour.setGrowSpeed(pixel.getGrowSpeed());
-                newPixel.add(neumannNeighbour);
-            }
-        }
         return newPixel;
     }
 
@@ -94,7 +82,7 @@ public final class ImageData {
                     total++;
                 } else if (this.data[x][y].getPixelState() == Pixel.PixelState.INACTIVE) {
                     Color pixelColor = this.data[x][y].getColor();
-                    image.setRGB(x, y, new Color(pixelColor.getRed() - 20, pixelColor.getGreen(), pixelColor.getBlue()).getRGB());
+                    image.setRGB(x, y, new Color(pixelColor.getRed(), pixelColor.getGreen(), pixelColor.getBlue()).getRGB());
                     total++;
                 }
             }
