@@ -1,13 +1,12 @@
-package com.benning.joshua.aufgabe2.v1.model;
+package com.benning.joshua.aufgabe2.v1.model.data;
 
-import com.benning.joshua.aufgabe2.v1.model.Pixel;
 import lombok.Data;
 
 @Data
-public class GrowSpeed {
+public class SpeedData {
     private final float[] speeds;
 
-    public GrowSpeed(float speedN, float speedS, float speedW, float speedE) {
+    public SpeedData(float speedN, float speedS, float speedW, float speedE) {
         this.speeds = new float[]{speedN, speedS, speedW, speedE};
     }
 

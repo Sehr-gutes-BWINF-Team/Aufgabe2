@@ -1,7 +1,5 @@
 package com.benning.joshua.aufgabe2.v1.model;
 
-import com.benning.joshua.aufgabe2.v1.model.Pixel;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -10,12 +8,12 @@ import java.io.IOException;
 import java.util.*;
 import java.util.List;
 
-public final class ImageData {
+public final class Canvas {
     private final Pixel[][] data;
     private final int width;
     private final int height;
 
-    public ImageData(int width, int height, Color defaultColor) {
+    public Canvas(int width, int height, Color defaultColor) {
         this.data = new Pixel[width][height];
         this.width = width;
         this.height = height;
@@ -88,7 +86,7 @@ public final class ImageData {
         return newPixel;
     }
 
-    public BufferedImage render(int debugStep) {
+    public BufferedImage render(boolean saveFile, String fileName) {
         BufferedImage image = new BufferedImage(this.width, this.height, BufferedImage.TYPE_INT_RGB);
         int total = 0;
         for (int x = 0; x < this.width; x++) {
@@ -104,7 +102,7 @@ public final class ImageData {
             }
         }
         try {
-            ImageIO.write(image, "PNG", new File("out/debug" + debugStep + ".png"));
+             if (saveFile) ImageIO.write(image, "PNG", new File("./out/image.png"));
             return image;
         } catch (IOException e) {
             e.printStackTrace();
@@ -116,7 +114,7 @@ public final class ImageData {
     public boolean equals(Object obj) {
         if (obj == this) return true;
         if (obj == null || obj.getClass() != this.getClass()) return false;
-        var that = (ImageData) obj;
+        var that = (Canvas) obj;
         return Objects.equals(this.data, that.data) &&
                 this.width == that.width &&
                 this.height == that.height;

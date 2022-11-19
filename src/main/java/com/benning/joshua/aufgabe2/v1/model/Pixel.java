@@ -1,5 +1,6 @@
 package com.benning.joshua.aufgabe2.v1.model;
 
+import com.benning.joshua.aufgabe2.v1.model.data.SpeedData;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,17 +14,17 @@ public class Pixel {
     private final int y;
     private PixelState pixelState = PixelState.EMPTY;
     private Color color;
-    private GrowSpeed growSpeed;
+    private SpeedData growSpeed;
 
     public Pixel(int x, int y, PixelState pixelState, Color color) {
         this.x = x;
         this.y = y;
         this.pixelState = pixelState;
         this.color = color;
-        this.growSpeed = new GrowSpeed(1.0f, 1.0f, 1.0f, 1.0f);
+        this.growSpeed = new SpeedData(1.0f, 1.0f, 1.0f, 1.0f);
     }
 
-    public Pixel(int x, int y, PixelState pixelState, Color color, GrowSpeed growSpeed) {
+    public Pixel(int x, int y, PixelState pixelState, Color color, SpeedData growSpeed) {
         this.x = x;
         this.y = y;
         this.pixelState = pixelState;
