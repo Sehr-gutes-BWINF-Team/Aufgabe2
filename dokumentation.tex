@@ -4,7 +4,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[a4paper,margin=2.5cm,footskip=0.5cm]{geometry}
 
-\newcommand{\Aufgabe}{Aufgabe2: Verzinkt} 
+\newcommand{\Aufgabe}{Aufgabe 2: Verzinkt} 
 \newcommand{\TeamId}{00382}
 \newcommand{\TeamName}{Sehr gutes BWINF Team} 
 \newcommand{\Namen}{Paul Franosch, Joshua Benning, Lenny Schürer, Marinus Lentile}          
@@ -48,7 +48,7 @@
 }
 
 % Diese beiden Pakete müssen zuletzt geladen werden
-%\usepackage{hyperref} % Anklickbare Links im Dokument
+\usepackage{hyperref} % Anklickbare Links im Dokument
 \usepackage{cleveref}
 
 % Daten für die Titelseite
@@ -120,15 +120,19 @@ Bei der oberen Reihe variieren dabei die Wachstumsgeschwindigkeiten in alle Rich
 Da auf dem Referenzbild allerdings Kristalle verschiedener Formen und allgemein verschiedener Größen vorliegen, reichen die Wachstumsgeschwindigkeit und die Keimzahl nicht, um diese Varianz vollständig darzustellen. Es bietet sich daher an, Keime erst auf das Raster zu setzen nachdem andere bereits Zeit zum Wachsen hatten.
 In den Beispielen hier wurde wieder ein Raster von 200px x 200px verwendet. In dem Bild links wurde 1 Keim, im Mittleren wurden 15 Keime und rechts wurden 30 Keime pro 3 Wachstumsiterationen hinzugefügt. Die Bilder hier ähneln dem Referenzbild schon eher, da sie sowohl Bereiche mit Ansammlungen kleiner als auch große, durchgängige Kristalle aufweisen.
 \subsection{Beispiele}
+Parameter Beispiel 1-3: -width 200 -height 200 -type PNG -initialSP 5 -SPperTick 25 -tickDuration 10000
+Parameter Beispiel 4-5: -width 200 -height 200 -type PNG -initialSP 15 -SPperTick 15 -tickDuration 30000
+Wachstumsgeschwindigkeit wurden nicht überschrieben; 0.0 bis 1.0 für alle Richtungen
 \subsubsection{Beispiel 1}
 \centerline{\includegraphics{beispiel1}}
 \subsubsection{Beispiel 2}
 \centerline{\includegraphics{beispiel2}}
+\newpage
 \subsubsection{Beispiel 3}
 \centerline{\includegraphics{beispiel3}}
-\newpage
 \subsubsection{Beispiel 4}
 \centerline{\includegraphics{beispiel4}}
+\newpage
 \subsubsection{Beispiel 5}
 \centerline{\includegraphics{beispiel5}}
 
