@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.*;
 import java.util.List;
 
-public final class Canvas {
+public class Canvas {
     private final Pixel[][] data;
     private final int width;
     private final int height;
@@ -26,14 +26,6 @@ public final class Canvas {
 
     public Pixel[][] getData() {
         return data;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public int getHeight() {
-        return height;
     }
 
     public HashMap<Pixel.Direction, Pixel> getNeumannNeighbours(Pixel pixel) {
@@ -102,7 +94,7 @@ public final class Canvas {
             }
         }
         try {
-             if (saveFile) ImageIO.write(image, "PNG", new File("./out/image.png"));
+             if (saveFile) ImageIO.write(image, "PNG", new File("./out/" + fileName + ".png"));
             return image;
         } catch (IOException e) {
             e.printStackTrace();

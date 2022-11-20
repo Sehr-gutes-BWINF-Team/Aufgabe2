@@ -20,6 +20,8 @@ public class GrowSpeedGenerator {
     }
 
     public SpeedData getRandomSpeed() {
-        return new SpeedData(nRange.get(), sRange.get(), wRange.get(), eRange.get());
+        SpeedData speedData = new SpeedData(nRange.get(), sRange.get(), wRange.get(), eRange.get());
+        speedData.randomize();
+        return speedData;
     }
 }

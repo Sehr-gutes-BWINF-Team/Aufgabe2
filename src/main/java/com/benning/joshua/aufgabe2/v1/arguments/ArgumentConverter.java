@@ -4,7 +4,7 @@ import com.benning.joshua.aufgabe2.v1.arguments.model.Argument;
 import com.benning.joshua.aufgabe2.v1.arguments.model.FloatArgument;
 import com.benning.joshua.aufgabe2.v1.arguments.model.ImageTypeArgument;
 import com.benning.joshua.aufgabe2.v1.arguments.model.IntArgument;
-import com.benning.joshua.aufgabe2.v1.model.ImageType;
+import com.benning.joshua.aufgabe2.v1.model.data.ImageType;
 import com.benning.joshua.aufgabe2.v1.model.data.GenerationData;
 import com.benning.joshua.aufgabe2.v1.model.data.GrowSpeedGenerator;
 import com.benning.joshua.aufgabe2.v1.model.data.ImageGenData;
@@ -76,7 +76,6 @@ public class ArgumentConverter {
             for (Argument argument : arguments) {
                 if (argument.isApplicable(name, content)) {
                     Object parse = argument.parse(content);
-                    System.out.println(name + " " + parse);
 
                     // ImageData
                     if (name.equalsIgnoreCase(imageWidthArgName)) this.imageGenData.setWidth((Integer) parse);

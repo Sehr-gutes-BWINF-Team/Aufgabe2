@@ -1,6 +1,6 @@
 package com.benning.joshua.aufgabe2.v1.arguments.model;
 
-import com.benning.joshua.aufgabe2.v1.model.ImageType;
+import com.benning.joshua.aufgabe2.v1.model.data.ImageType;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

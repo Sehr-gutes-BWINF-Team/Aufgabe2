@@ -1,0 +1,20 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Lösungsidee}{1}{}%
+\contentsline {section}{\numberline {2}Umsetzung}{1}{}%
+\contentsline {subsection}{\numberline {2.1}Leinwand und Pixel}{1}{}%
+\contentsline {subsection}{\numberline {2.2}Wachstumsprozess}{2}{}%
+\contentsline {subsection}{\numberline {2.3}Anpassung der Ergebnisse}{2}{}%
+\contentsline {subsection}{\numberline {2.4}Ausgabe}{2}{}%
+\contentsline {section}{\numberline {3}Beispiele}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Initiale Keime und Wachstumsgeschwindigkeiten}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Späteres Hinzufügen von Keimen}{3}{}%
+\contentsline {subsection}{\numberline {3.3}Beispiele}{4}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Beispiel 1}{4}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Beispiel 2}{4}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Beispiel 3}{4}{}%
+\contentsline {subsubsection}{\numberline {3.3.4}Beispiel 4}{5}{}%
+\contentsline {subsubsection}{\numberline {3.3.5}Beispiel 5}{5}{}%
+\contentsline {section}{\numberline {4}Quellcode}{6}{}%
+\contentsline {subsection}{\numberline {4.1}ImageGenerator-Klasse}{6}{}%
+\contentsline {subsection}{\numberline {4.2}Canvas-Klasse}{7}{}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

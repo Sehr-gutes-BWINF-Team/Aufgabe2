@@ -8,7 +8,7 @@ import javax.imageio.stream.ImageOutputStream;
 import java.awt.image.RenderedImage;
 import java.io.IOException;
 
-public class SequenceWriter { // https://memorynotfound.com/generate-gif-image-java-delay-infinite-loop-example/
+public class SequenceWriter {
 
     protected ImageWriter writer;
     protected ImageWriteParam params;
@@ -37,9 +37,6 @@ public class SequenceWriter { // https://memorynotfound.com/generate-gif-image-j
         graphicsControlExtensionNode.setAttribute("transparentColorFlag", "FALSE");
         graphicsControlExtensionNode.setAttribute("delayTime", Integer.toString(delay / 10));
         graphicsControlExtensionNode.setAttribute("transparentColorIndex", "0");
-
-        IIOMetadataNode commentsNode = getNode(root, "CommentExtensions");
-        commentsNode.setAttribute("CommentExtension", "Created by: https://memorynotfound.com");
 
         IIOMetadataNode appExtensionsNode = getNode(root, "ApplicationExtensions");
         IIOMetadataNode child = new IIOMetadataNode("ApplicationExtension");
